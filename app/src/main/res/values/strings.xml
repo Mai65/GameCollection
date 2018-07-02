@@ -1,0 +1,117 @@
+<resources>
+    <string name="app_name">GameCollection</string>
+    <string name="start_TicTacToe">start TicTacToe</string>
+    <string name="play_again">Play again</string>
+    <string name="choose_game">Choose Game</string>
+    <string name="game_Collection">Menue</string>
+    <string name="player_won_0">Player 0 wins!</string>
+    <string name="player_won_X">Player X wins!</string>
+    <string name="start_Connect4">start Connect4</string>
+    <string name="player_yellow_won">Player Yellow wins!</string>
+    <string name="player_red_won">Player Red wins!</string>
+    <string name="draw">Draw!</string>
+    <string name="settings">Settings</string>
+    <string name="settings_chooseLanguage">Language</string>
+    <string name="settings_chooseBackroundColor">Background Color</string>
+    <string name="color_yellow">Yellow Color</string>
+    <string name="color_blue">Blue color</string>
+    <string name="start_Battleship">Start Battleship</string>
+    <string name="player_a">Player A\'s turn</string>
+    <string name="player_b">Player B\'s turn</string>
+    <string name="help">How to play</string>
+    <string name="howToPlay">Choose one of the different game modes in the menue and start to play with somebody else!</string>
+    <string name="howToPlayGamemodes">When you don\'t now how a specific mode works just click on the questionmark next to it.</string>
+    <string name="TicTacToe_instructions">Tic-tac-toe is a game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.</string>
+    <string name="TicTacToe_headline">TicTacToe</string>
+    <string name="Connect4_headline">Connect 4</string>
+    <string name="Battleship_headline">Battleship</string>
+    <string name="Connect4_instructions">The first player begins by dropping one of his/her discs into the center column of the game board. The two players then alternate turns dropping one of their discs at a time into an unfilled column until one player achieves four in a row -- either horizontally, vertically or diagonally; the player that does so wins the game. However, if the game board fills up before either player achieves four in a row, then the game is a draw.</string>
+    <string name="Battleship_instructions_1">The game is played on four grids, two for each player. The grids are typically 10 x 10 square and the individual squares in the grid are identified by letter and number. On one grid the player arranges ships and records the shots by the opponent. On the other grid the player records their own shots.</string>
+    <string name="Battleship_instructions_2">Before play begins, each player secretly arranges their ships on their primary grid. Each ship occupies several consecutive squares on the grid, arranged either horizontally or vertically. The number of squares for each ship is determined by the type of the ship. The ships cannot overlap (i.e., only one ship can occupy any given square in the grid). The types and numbers of ships allowed are the same for each player.</string>
+    <string name="Battleship_instructions_3">After the ships have been positioned, the game proceeds in a series of rounds. In each round, each player takes a turn to announce a target square in the opponent\'s grid which is to be shot at. The opponent announces whether the square is occupied by a ship, and if it is a \"miss\", the opponent player marks their primary grid with a white peg; if a \"hit\" they mark this on their own primary grid with a red peg.</string>
+    <string name="Battleship_instructions_4">When all the squares of a ship have been hit, the ship is sunk, and the ship\'s owner announces this (e.g. \"You sank my battleship!\"). If all a player\'s ships have been sunk, the game is over and their opponent wins.</string>
+    <string name="settings_chooseBackgrondColor_subline">Choose you\'re favorite colour</string>
+    <string name="settings_design">Design</string>
+    <string-array name="color_settings">
+        <item>@string/color_blue</item>
+        <item>@string/color_yellow</item>
+        <item>@string/color_white</item>
+    </string-array>
+    <string name="color_white">White</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GameCollection</string>
+    <string name="start_TicTacToe">Tic Tac Toe starten</string>
+    <string name="play_again">Nochmal spielen</string>
+    <string name="choose_game">Spiel Auswählen</string>
+    <string name="game_Collection">Spielesammlung</string>
+    <string name="player_won_0">Spieler 0 gewinnt!</string>
+    <string name="player_won_X">Spieler X gewinnt!</string>
+    <string name="start_Connect4">Vier Gewinnt spielen</string>
+    <string name="player_yellow_won">Spieler Gelb gewinnt!</string>
+    <string name="player_red_won">Spieler Rot gewinnt!</string>
+    <string name="draw">Unentschieden!</string>
+    <string name="settings">Einstellungen</string>
+    <string name="settings_chooseLanguage">Sprache</string>
+    <string name="settings_chooseBackroundColor">Hintergrundfarbe</string>
+    <string name="color_yellow">Gelbe Hintergrundfarbe</string>
+    <string name="color_blue">Blaue Hintergrundfarbe</string>
+    <string name="start_Battleship">Schiffe versenken spielen</string>
+    <string name="player_a">Spieler A ist am Zug</string>
+    <string name="player_b">Spieler B ist am Zug</string>
+    <string name="help">Anleitung</string>
+    <string name="howToPlay">Suche dir einen Spielmodus im Hauptmenü aus und fange mit jemandem anderen an zu spielen!</string>
+    <string name="howToPlayGamemodes">Wenn du nicht weißt, wie ein Modus funktioniert klicke auf das Fragenzeichen rechts neben ihm.</string>
+    <string name="TicTacToe_instructions">"Auf einem quadratischen, 3×3 Felder großen Spielfeld setzen die beiden Spieler abwechselnd ihr Zeichen, X und O, in ein freies Feld. Der Spieler, der als Erster drei Zeichen in eine Zeile, Spalte oder Diagonale setzen kann, gewinnt. "</string>
+    <string name="TicTacToe_headline">TicTacToe</string>
+    <string name="Connect4_headline">Vier gewinnt</string>
+    <string name="Battleship_headline">Schiffe versenken</string>
+    <string name="Connect4_instructions">Das Spiel wird auf einem senkrecht stehenden hohlen Spielbrett gespielt, in das die Spieler abwechselnd ihre Spielsteine fallen lassen. Das Spielbrett besteht aus sieben Spalten (und sechs Reihen. Jeder Spieler besitzt 21 gleichfarbige Spielsteine. Wenn ein Spieler einen Spielstein in eine Spalte fallen lässt, besetzt dieser den untersten freien Platz der Spalte. Gewinner ist der Spieler, der es als erster schafft, vier oder mehr seiner Spielsteine waagerecht, senkrecht oder diagonal in eine Linie zu bringen. Das Spiel endet unentschieden, wenn das Spielbrett komplett gefüllt ist, ohne dass ein Spieler eine Viererlinie gebildet hat.</string>
+    <string name="Battleship_instructions_1">Jeder Spieler versteckt eine kleine Flotte von Schiffen vor seinem Gegner. Derjenige, der zuerst alle Schiffe des Gegners komplett getroffen und versenkt hat, gewinnt.</string>
+    <string name="Battleship_instructions_2">Vor dem ersten Zug muss jeder seine Schiffe einsetzen. Die Schiffe müssen so eingesetzt werden, dass sie sich weder horizontal noch vertikal berühren - sie dürfen also nicht an einer Kante angrenzen, diagonales Berühren über Eck ist zulässig.</string>
+    <string name="Battleship_instructions_3">Wähle ein Schiff durch Anklicken, drehe es gegebenenfalls durch den entsprechenden Button. Schiebe es über das Brett bis die Position stimmt und klicke dann, um es abzusetzen. Wenn du ein Schiff wieder entfernen willst, kannst du es durch Anklicken wieder zurücknehmen. Sind alle Schiffe eingesetzt, bestätige und das Spiel kann starten.</string>
+    <string name="Battleship_instructions_4">Feuere auf ein bestimmtes Feld, indem du im oberen Brett auf das gewünschte Feld klickst. Bestätige und du siehst sofort, ob du getroffen hast.</string>
+    <string name="settings_chooseBackgrondColor_subline">Suche dir deine Lieblingsfarbe aus</string>
+    <string name="settings_design">Aussehen</string>
+    <string name="color_white">Weiß</string>
+</resources>
