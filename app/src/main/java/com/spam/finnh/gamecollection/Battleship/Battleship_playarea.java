@@ -28,5 +28,5 @@ public class Battleship_playarea extends AppCompatActivity {
         setContentView(R.layout.battleship_playarea_player_a);
     }
 
-
+//Hallo
 }
