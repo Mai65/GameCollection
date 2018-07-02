@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.spam.finnh.gamecollection.R;
 
+
 public class Battleship_playarea extends AppCompatActivity {
 
     public boolean turn;
