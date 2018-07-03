@@ -29,10 +29,10 @@
         <activity android:name=".Instructions.TicTacToe_instructions" />
         <activity android:name=".Menues.Help" />
         <activity android:name=".Instructions.Battleship_instructions" />
+        <activity android:name=".Instructions.Connect4_instructions" />
         <activity
             android:name=".Menues.SettingsActivity"
-            android:label="@string/title_activity_settings" />
-        <activity android:name=".Instructions.Connect4_instructions" />
+            android:label="@string/title_activity_settings"></activity>
     </application>
 
 </manifest>
