@@ -17,4 +17,10 @@
         android:icon="@drawable/ic_sync_black_24dp"
         android:title="@string/pref_header_data_sync" />
 
+    <header
+        android:fragment="com.spam.finnh.gamecollection.Menues.SettingsActivity$AppearanceFragment"
+        android:icon="@drawable/ic_action_name"
+        android:title="@string/pref_appearance" />
+
+
 </preference-headers>
