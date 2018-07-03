@@ -8,4 +8,13 @@
         android:negativeButtonText="@null"
         android:positiveButtonText="@null"
         android:title="@string/settings_chooseBackroundColor" />
+
+    <ListPreference
+        android:defaultValue="-1"
+        android:entries="@array/fonts"
+        android:entryValues="@array/fonts"
+        android:key="example_list"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/settings_chooseFont" />
 </PreferenceScreen>
