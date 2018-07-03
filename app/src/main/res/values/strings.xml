@@ -114,7 +114,15 @@
     <string name="title_activity_tic_tac_toe_instructions">blablieblup</string>
     <string name="test">testsesadfasdf</string>
     <string name="background_image">background_image</string>
+    <string name="pref_appearance">Appearance</string>
+    <string name="settings_chooseFont">Font</string>
 
+    <string-array name="fonts">
+
+        <item>Arial</item>
+        <item>Times New Roman</item>
+        <item>Trademark</item>
+    </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

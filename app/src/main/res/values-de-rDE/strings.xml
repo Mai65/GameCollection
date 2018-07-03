@@ -34,4 +34,7 @@
     <string name="settings_chooseBackgrondColor_subline">Suche dir deine Lieblingsfarbe aus</string>
     <string name="settings_design">Aussehen</string>
     <string name="color_white">Weiß</string>
+    <string name="pref_appearance">Appearance</string>
+    <string name="title_activity_settings">Einstellungen</string>
+    <string name="background_image">Hi</string>
 </resources>
