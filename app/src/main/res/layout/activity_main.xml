@@ -10,12 +10,16 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/game_Collection"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        android:textStyle="bold"
-        app:fontFamily="@font/trademark"
+        android:textColor="#000"
+        android:textSize="45sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,10 +29,14 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:onClick="startTicTacToe"
         android:text="@string/start_TicTacToe"
+        android:textColor="#000"
+        android:textSize="15sp"
         app:layout_constraintEnd_toStartOf="@+id/tictactohelp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -38,10 +46,14 @@
         android:layout_width="0dp"
         android:layout_height="52dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:onClick="startConnect4"
         android:text="@string/start_Connect4"
+        android:textColor="#000"
+        android:textSize="15sp"
         app:layout_constraintEnd_toStartOf="@+id/connect4help"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button" />
@@ -51,10 +63,14 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:onClick="startBattleship"
         android:text="@string/start_Battleship"
+        android:textColor="#000"
+        android:textSize="15sp"
         app:layout_constraintEnd_toStartOf="@+id/battleshiphelp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button100" />
@@ -69,7 +85,8 @@
         android:onClick="startSettings"
         android:src="@android:drawable/ic_menu_manage"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/settings" />
 
     <ImageButton
         android:id="@+id/help"
@@ -81,7 +98,8 @@
         android:onClick="startHelp"
         app:layout_constraintBottom_toTopOf="@+id/settings"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_help" />
+        app:srcCompat="@android:drawable/ic_menu_help"
+        android:contentDescription="@string/help" />
 
     <ImageButton
         android:id="@+id/tictactohelp"
@@ -93,7 +111,8 @@
         android:onClick="startTicTacToeInstructions"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@android:drawable/ic_menu_help" />
+        app:srcCompat="@android:drawable/ic_menu_help"
+        android:contentDescription="@string/help" />
 
     <ImageButton
         android:id="@+id/connect4help"
@@ -105,7 +124,8 @@
         android:onClick="startConnect4Instructions"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tictactohelp"
-        app:srcCompat="@android:drawable/ic_menu_help" />
+        app:srcCompat="@android:drawable/ic_menu_help"
+        android:contentDescription="@string/help"/>
 
     <ImageButton
         android:id="@+id/battleshiphelp"
@@ -117,6 +137,7 @@
         android:onClick="startBattleshipInstructions"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/connect4help"
-        app:srcCompat="@android:drawable/ic_menu_help" />
+        app:srcCompat="@android:drawable/ic_menu_help"
+        android:contentDescription="@string/help"/>
 
 </android.support.constraint.ConstraintLayout>
