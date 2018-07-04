@@ -77,6 +77,11 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-        System.out.println("Gustav");
+        if ("colour".equals(key)) {
+
+
+            findViewById(R.id.textView2).getRootView().setBackgroundColor(getResources().getColor(android.R.color.holo_blue_bright));
+
+        }
     }
 }
