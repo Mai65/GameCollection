@@ -33,9 +33,10 @@
     <string name="settings_chooseBackgrondColor_subline">Choose you\'re favorite colour</string>
     <string name="settings_design">Design</string>
     <string-array name="color_settings">
+        <item>@string/color_white</item>
         <item>@string/color_blue</item>
         <item>@string/color_yellow</item>
-        <item>@string/color_white</item>
+
     </string-array>
     <string name="color_white">White</string>
     <string name="title_activity_settings">Settings</string>
