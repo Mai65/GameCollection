@@ -1,7 +1,9 @@
 package com.spam.finnh.gamecollection.Menues;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
@@ -13,14 +15,17 @@ import com.spam.finnh.gamecollection.Instructions.TicTacToe_instructions;
 import com.spam.finnh.gamecollection.R;
 import com.spam.finnh.gamecollection.TicTacToe.TicTacToe_playarea;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        prefs.registerOnSharedPreferenceChangeListener(this);
     }
+
 
     public void startTicTacToe(View view) {
         Intent intent;
@@ -68,5 +73,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent;
         intent = new Intent(this, Battleship_instructions.class);
         startActivity(intent);
+    }
+
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+        System.out.println("Gustav");
     }
 }

@@ -20,6 +20,7 @@ import android.text.TextUtils;
 import android.view.MenuItem;
 
 import com.spam.finnh.gamecollection.R;
+import com.spam.finnh.gamecollection.Settings.changeBackground;
 
 import java.util.List;
 
