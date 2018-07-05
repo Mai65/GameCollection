@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         setContentView(R.layout.activity_main);
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         prefs.registerOnSharedPreferenceChangeListener(this);
+        changeColor(prefs);
     }
 
 
@@ -78,9 +79,18 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         if ("colour".equals(key)) {
-            sharedPreferences.getString("colour", String.valueOf(R.string.color_white));
-            findViewById(R.id.textView2).getRootView().setBackgroundColor(getResources().getColor(android.R.color.holo_blue_bright));
+            changeColor(sharedPreferences);
+        }
+    }
 
+    private void changeColor(SharedPreferences sharedPreferences) {
+        String selected = sharedPreferences.getString("colour", getString(R.string.color_white));
+        if (selected.equalsIgnoreCase(getString(R.string.color_yellow))) {
+            findViewById(R.id.textView2).getRootView().setBackgroundColor(getResources().getColor(R.color.yellow));
+        } else if (selected.equalsIgnoreCase(getString(R.string.color_blue))) {
+            findViewById(R.id.textView2).getRootView().setBackgroundColor(getResources().getColor(R.color.blue));
+        } else if (selected.equalsIgnoreCase(getString(R.string.color_blue))) {
+            findViewById(R.id.textView2).getRootView().setBackgroundColor(getResources().getColor(R.color.white));
         }
     }
 }
