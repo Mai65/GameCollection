@@ -1,6 +1,8 @@
 package com.spam.finnh.gamecollection.Connect4;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.constraint.ConstraintLayout;
 import android.support.constraint.ConstraintSet;
 import android.support.v7.app.AppCompatActivity;
@@ -20,6 +22,8 @@ public class Connect4_playarea extends AppCompatActivity {
         setContentView(R.layout.connect4_activity_playarea);
         buttonCount = 0;
         Buttons = new Button[56];
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        changeColor(prefs);
     }
 
 
@@ -98,4 +102,17 @@ public class Connect4_playarea extends AppCompatActivity {
 
         }
     }
+
+    private void changeColor(SharedPreferences sharedPreferences) {
+        String selected = sharedPreferences.getString("colour", getString(R.string.color_white));
+        if (selected.equalsIgnoreCase(getString(R.string.color_yellow))) {
+            findViewById(R.id.button16).getRootView().setBackgroundColor(getResources().getColor(R.color.yellow));
+        } else if (selected.equalsIgnoreCase(getString(R.string.color_blue))) {
+            findViewById(R.id.button16).getRootView().setBackgroundColor(getResources().getColor(R.color.blue));
+        } else if (selected.equalsIgnoreCase(getString(R.string.color_white))) {
+            findViewById(R.id.button16).getRootView().setBackgroundColor(getResources().getColor(R.color.white));
+        }
+    }
+
+
 }

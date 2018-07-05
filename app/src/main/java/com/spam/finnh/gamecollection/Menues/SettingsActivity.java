@@ -3,6 +3,7 @@ package com.spam.finnh.gamecollection.Menues;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
@@ -86,6 +87,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity  {
                 // simple string representation.
                 preference.setSummary(stringValue);
             }
+
             return true;
         }
     };
@@ -95,6 +97,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity  {
      * example, 10" tablets are extra-large.
      */
     private static boolean isXLargeTablet(Context context) {
+        ;
         return (context.getResources().getConfiguration().screenLayout
                 & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_XLARGE;
     }
@@ -124,7 +127,8 @@ public class SettingsActivity extends AppCompatPreferenceActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setupActionBar();
-        System.out.println("hallo");
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        changeColor(prefs);
     }
 
     /**
@@ -153,6 +157,8 @@ public class SettingsActivity extends AppCompatPreferenceActivity  {
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public void onBuildHeaders(List<Header> target) {
         loadHeadersFromResource(R.xml.pref_headers, target);
+
+
     }
 
     /**
@@ -286,6 +292,17 @@ public class SettingsActivity extends AppCompatPreferenceActivity  {
                 return true;
             }
             return super.onOptionsItemSelected(item);
+        }
+    }
+    private void changeColor(SharedPreferences sharedPreferences) {
+        String selected = sharedPreferences.getString("colour", getString(R.string.color_white));
+        if (selected.equalsIgnoreCase(getString(R.string.color_yellow))) {
+            getWindow().getDecorView().setBackgroundColor(getResources().getColor(R.color.yellow));
+        } else if (selected.equalsIgnoreCase(getString(R.string.color_blue))) {
+            getWindow().getDecorView().setBackgroundColor(getResources().getColor(R.color.blue));
+        } else if (selected.equalsIgnoreCase(getString(R.string.color_white))) {
+            getWindow().getDecorView().setBackgroundColor(getResources().getColor(R.color.white));
+
         }
     }
 }

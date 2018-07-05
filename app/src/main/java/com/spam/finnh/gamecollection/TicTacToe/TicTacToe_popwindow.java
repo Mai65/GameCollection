@@ -2,7 +2,9 @@ package com.spam.finnh.gamecollection.TicTacToe;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.TextView;
 
@@ -15,6 +17,8 @@ public class TicTacToe_popwindow extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tictactoe_activity_wonscreen);
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        changeColor(prefs);
 
         Intent intent;
         intent = getIntent();
@@ -47,6 +51,17 @@ public class TicTacToe_popwindow extends Activity {
         intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
+    }
+
+    private void changeColor(SharedPreferences sharedPreferences) {
+        String selected = sharedPreferences.getString("colour", getString(R.string.color_white));
+        if (selected.equalsIgnoreCase(getString(R.string.color_yellow))) {
+            findViewById(R.id.button10).getRootView().setBackgroundColor(getResources().getColor(R.color.yellow));
+        } else if (selected.equalsIgnoreCase(getString(R.string.color_blue))) {
+            findViewById(R.id.button10).getRootView().setBackgroundColor(getResources().getColor(R.color.blue));
+        } else if (selected.equalsIgnoreCase(getString(R.string.color_white))) {
+            findViewById(R.id.button10).getRootView().setBackgroundColor(getResources().getColor(R.color.white));
+        }
     }
 
 

@@ -1,7 +1,9 @@
 package com.spam.finnh.gamecollection.TicTacToe;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -27,6 +29,8 @@ public class TicTacToe_playarea extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tictactoe_activity_playarea);
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        changeColor(prefs);
     }
 
     public void touched(View view) {
@@ -185,5 +189,14 @@ public class TicTacToe_playarea extends AppCompatActivity {
         finish();
     }
 
-
+    private void changeColor(SharedPreferences sharedPreferences) {
+        String selected = sharedPreferences.getString("colour", getString(R.string.color_white));
+        if (selected.equalsIgnoreCase(getString(R.string.color_yellow))) {
+            findViewById(R.id.imageView).getRootView().getRootView().setBackgroundColor(getResources().getColor(R.color.yellow));
+        } else if (selected.equalsIgnoreCase(getString(R.string.color_blue))) {
+            findViewById(R.id.imageView).getRootView().setBackgroundColor(getResources().getColor(R.color.blue));
+        } else if (selected.equalsIgnoreCase(getString(R.string.color_white))) {
+            findViewById(R.id.button1).getRootView().setBackgroundColor(getResources().getColor(R.color.white));
+        }
+    }
 }

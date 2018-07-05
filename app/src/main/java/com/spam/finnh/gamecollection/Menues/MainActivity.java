@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
             findViewById(R.id.textView2).getRootView().setBackgroundColor(getResources().getColor(R.color.yellow));
         } else if (selected.equalsIgnoreCase(getString(R.string.color_blue))) {
             findViewById(R.id.textView2).getRootView().setBackgroundColor(getResources().getColor(R.color.blue));
-        } else if (selected.equalsIgnoreCase(getString(R.string.color_blue))) {
+        } else if (selected.equalsIgnoreCase(getString(R.string.color_white))) {
             findViewById(R.id.textView2).getRootView().setBackgroundColor(getResources().getColor(R.color.white));
         }
     }
