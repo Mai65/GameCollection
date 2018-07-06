@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.spam.finnh.gamecollection">
 
     <application
@@ -9,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
-        android:fullBackupContent="@xml/backup_descriptor">
+        android:fullBackupContent="false"
+        tools:ignore="ExtraText">
         >
         <activity android:name=".Menues.MainActivity">
             <intent-filter>
@@ -27,6 +29,7 @@
         <activity android:name=".Connect4.Connect4_playarea" />
         <activity android:name=".Connect4.Connect4_wonScreen" />
         <activity android:name=".Battleship.Battleship_playarea" />
+        <activity android:name=".Battleship.Countdown"/>
         <activity android:name=".Instructions.TicTacToe_instructions" />
         <activity android:name=".Menues.Help" />
         <activity android:name=".Instructions.Battleship_instructions" />

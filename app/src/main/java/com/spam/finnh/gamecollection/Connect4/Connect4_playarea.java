@@ -41,8 +41,6 @@ public class Connect4_playarea extends AppCompatActivity {
         button.setTextSize(8);
         button.setText("I\nV");
 
-
-
         //Initialisierung vom Layout
         ConstraintLayout layout = findViewById(R.id.activity);
 
@@ -58,8 +56,8 @@ public class Connect4_playarea extends AppCompatActivity {
         //Initalisierung vom Set
         ConstraintSet set = new ConstraintSet();
 
-        set.constrainHeight(button.getId(), (int) ((int) getResources().getDisplayMetrics().density * 47));
-        set.constrainWidth(button.getId(), (int) ((int) getResources().getDisplayMetrics().density * 45));
+        set.constrainHeight(button.getId(),  ((int) getResources().getDisplayMetrics().density * 47));
+        set.constrainWidth(button.getId(),  ((int) getResources().getDisplayMetrics().density * 45));
 
 
         set.connect(button.getId(), ConstraintSet.TOP, R.id.guideline_h, ConstraintSet.TOP, 16);

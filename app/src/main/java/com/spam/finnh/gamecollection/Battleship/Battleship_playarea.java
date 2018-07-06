@@ -26,6 +26,6 @@ public class Battleship_playarea extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.battleship_playarea_player_a);
+        setContentView(R.layout.battleship_playarea_start_a);
     }
 }

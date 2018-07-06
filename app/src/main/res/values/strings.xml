@@ -15,7 +15,7 @@
     <string name="settings_chooseBackroundColor">Background Color</string>
     <string name="color_yellow">Yellow Color</string>
     <string name="color_blue">Blue color</string>
-    <string name="start_Battleship">Start Battleship</string>
+    <string name="start_Battleshipg">Start Battleship</string>
     <string name="player_a">Player A\'s turn</string>
     <string name="player_b">Player B\'s turn</string>
     <string name="help">How to play</string>
@@ -116,6 +116,10 @@
     <string name="background_image">background_image</string>
     <string name="pref_appearance">Appearance</string>
     <string name="settings_chooseFont">Font</string>
+    <string name="Go">Go!</string>
+    <string name="number_five">5</string>
+    <string name="number_six">6</string>
+    <string name="player_a_beginns">Player A\'s turn starts in</string>
 
     <string-array name="fonts">
 
