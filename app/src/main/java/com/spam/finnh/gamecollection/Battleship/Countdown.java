@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+
 import com.spam.finnh.gamecollection.R;
 
 public class Countdown extends AppCompatActivity {
@@ -42,4 +43,5 @@ public class Countdown extends AppCompatActivity {
         intent = new Intent(this, Battleship_playarea.class);
         startActivity(intent);
     }
+    //#h
 }
