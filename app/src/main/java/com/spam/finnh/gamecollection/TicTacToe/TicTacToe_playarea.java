@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+
 import com.spam.finnh.gamecollection.R;
 
 public class TicTacToe_playarea extends AppCompatActivity {
@@ -30,7 +31,8 @@ public class TicTacToe_playarea extends AppCompatActivity {
     }
 
     public void touched(View view) {
-        Button button = (Button) view;
+        Button button;
+        button = (Button) view;
         if (!button.isEnabled()) {
             return;
         }
