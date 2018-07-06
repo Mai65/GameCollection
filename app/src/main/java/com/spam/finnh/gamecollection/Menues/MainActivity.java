@@ -1,5 +1,8 @@
 package com.spam.finnh.gamecollection.Menues;
 
+import android.app.Fragment;
+import android.app.FragmentController;
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;

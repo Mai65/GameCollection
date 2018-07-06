@@ -1,6 +1,7 @@
 package com.spam.finnh.gamecollection.Menues;
 
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -17,8 +18,10 @@ import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 import android.preference.RingtonePreference;
 import android.support.v7.app.ActionBar;
+import android.support.v7.widget.ActivityChooserView;
 import android.text.TextUtils;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.spam.finnh.gamecollection.R;
 
@@ -35,9 +38,10 @@ import java.util.List;
  * href="http://developer.android.com/guide/topics/ui/settings.html">Settings
  * API Guide</a> for more information on developing a Settings UI.
  */
-public class SettingsActivity extends AppCompatPreferenceActivity  {
 
+public class SettingsActivity extends AppCompatPreferenceActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
 
+    SharedPreferences prefs;
 
     /**
      * A preference value change listener that updates the preference's summary
@@ -125,10 +129,14 @@ public class SettingsActivity extends AppCompatPreferenceActivity  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        prefs = PreferenceManager.getDefaultSharedPreferences(this);
+
+        changeColor(prefs);
         super.onCreate(savedInstanceState);
         setupActionBar();
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        changeColor(prefs);
+
+
+        View test = findViewById(R.id.header_Appearance);
     }
 
     /**
@@ -166,6 +174,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity  {
      * Make sure to deny any unknown fragments here.
      */
     protected boolean isValidFragment(String fragmentName) {
+
         return PreferenceFragment.class.getName().equals(fragmentName)
                 || GeneralPreferenceFragment.class.getName().equals(fragmentName)
                 || DataSyncPreferenceFragment.class.getName().equals(fragmentName)
@@ -173,6 +182,12 @@ public class SettingsActivity extends AppCompatPreferenceActivity  {
                 || AppearanceFragment.class.getName().equals(fragmentName);
     }
 
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+        Intent intent = new Intent(this, SettingsActivity.class);
+        startActivity(intent);
+        finish();
+    }
 
 
     /**
@@ -289,19 +304,23 @@ public class SettingsActivity extends AppCompatPreferenceActivity  {
             int id = item.getItemId();
             if (id == android.R.id.home) {
                 startActivity(new Intent(getActivity(), SettingsActivity.class));
+
                 return true;
             }
             return super.onOptionsItemSelected(item);
         }
     }
     private void changeColor(SharedPreferences sharedPreferences) {
+
+
+
         String selected = sharedPreferences.getString("colour", getString(R.string.color_white));
         if (selected.equalsIgnoreCase(getString(R.string.color_yellow))) {
-            getWindow().getDecorView().setBackgroundColor(getResources().getColor(R.color.yellow));
+            setTheme(R.style.YellowTheme);
         } else if (selected.equalsIgnoreCase(getString(R.string.color_blue))) {
-            getWindow().getDecorView().setBackgroundColor(getResources().getColor(R.color.blue));
+            setTheme(R.style.BlueTheme);
         } else if (selected.equalsIgnoreCase(getString(R.string.color_white))) {
-            getWindow().getDecorView().setBackgroundColor(getResources().getColor(R.color.white));
+            setTheme(R.style.WhiteTheme);
 
         }
     }
