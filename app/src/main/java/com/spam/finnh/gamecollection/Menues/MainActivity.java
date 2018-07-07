@@ -31,48 +31,56 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         Intent intent;
         intent = new Intent(this, TicTacToe_playarea.class);
         startActivity(intent);
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 
     public void startConnect4(View view) {
         Intent intent;
         intent = new Intent(this, Connect4_playarea.class);
         startActivity(intent);
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 
     public void startBattleship(View view) {
         Intent intent;
         intent = new Intent(this, Battleship_chooseBoat.class);
         startActivity(intent);
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 
     public void startSettings(View view) {
         Intent intent;
         intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 
     public void startHelp(View view) {
         Intent intent;
         intent = new Intent(this, Help.class);
         startActivity(intent);
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 
     public void startTicTacToeInstructions(View view) {
         Intent intent;
         intent = new Intent(this, TicTacToe_instructions.class);
         startActivity(intent);
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 
     public void startConnect4Instructions(View view) {
         Intent intent;
         intent = new Intent(this, Connect4_instructions.class);
         startActivity(intent);
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 
     public void startBattleshipInstructions(View view) {
         Intent intent;
         intent = new Intent(this, Battleship_instructions.class);
         startActivity(intent);
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 
     @Override
