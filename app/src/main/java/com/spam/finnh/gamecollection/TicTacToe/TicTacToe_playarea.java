@@ -182,7 +182,7 @@ public class TicTacToe_playarea extends AppCompatActivity {
     public void won() {
         Intent intent;
         intent = new Intent(this, TicTacToe_popwindow.class);
-        intent.putExtra("com.example.danielkerger.gamecollection.won", turn);
+        intent.putExtra("com.eexample", turn);
         startActivity(intent);
         finish();
     }

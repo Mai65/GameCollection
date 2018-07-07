@@ -28,7 +28,7 @@ public class Battleship_chooseBoat extends AppCompatActivity {
         }
         Intent intent;
         intent = new Intent(this, Countdown.class);
-        intent.putExtra("com.example.danielkerger.gamecollection.won", boat);
+        intent.putExtra("com.spam.finnh.gamecollection.boat", boat);
         startActivity(intent);
     }
 }
