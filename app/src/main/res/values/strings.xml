@@ -122,6 +122,9 @@
     <string name="player_a_beginns">Player A\'s turn starts in</string>
     <string name="battleship_setBoats">Set your boats</string>
     <string name="playarea">playarea</string>
+    <string name="battleship_choose_your_team">Choose your team</string>
+    <string name="blue_team">blueTeam</string>
+    <string name="red_team">redTeam</string>
 
     <string-array name="fonts">
 

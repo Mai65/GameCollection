@@ -7,8 +7,7 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.spam.finnh.gamecollection.Battleship.Battleship_playarea;
-import com.spam.finnh.gamecollection.Battleship.Countdown;
+import com.spam.finnh.gamecollection.Battleship.Battleship_chooseBoat;
 import com.spam.finnh.gamecollection.Connect4.Connect4_playarea;
 import com.spam.finnh.gamecollection.Instructions.Battleship_instructions;
 import com.spam.finnh.gamecollection.Instructions.Connect4_instructions;
@@ -42,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
 
     public void startBattleship(View view) {
         Intent intent;
-        intent = new Intent(this, Countdown.class);
+        intent = new Intent(this, Battleship_chooseBoat.class);
         startActivity(intent);
     }
 
