@@ -14,11 +14,11 @@
         android:text="@string/help"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        android:textStyle="bold"
+        android:textSize="45sp"
+        android:textColor="#000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <TextView
         android:id="@+id/textView4"
@@ -32,8 +32,8 @@
         android:text="@string/howToPlay"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Widget.TextView.SpinnerItem"
-        android:textSize="18sp"
-        android:textStyle="italic"
+        android:textSize="22sp"
+        android:textColor="#000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -48,10 +48,9 @@
         android:layout_marginTop="8dp"
         android:text="@string/howToPlayGamemodes"
         android:textAppearance="@style/TextAppearance.AppCompat.Widget.TextView.SpinnerItem"
-        android:textSize="18sp"
-        android:textStyle="italic"
+        android:textSize="22sp"
+        android:textColor="#000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
 </android.support.constraint.ConstraintLayout>

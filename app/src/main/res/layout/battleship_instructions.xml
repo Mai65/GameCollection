@@ -35,8 +35,8 @@
         android:alpha=".40"
         app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/battleship_blue"
+        app:layout_constraintStart_toStartOf="parent"
         android:contentDescription="@string/background_image"
         tools:ignore="VectorDrawableCompat"/>
 

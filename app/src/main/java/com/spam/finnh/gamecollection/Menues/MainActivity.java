@@ -7,8 +7,7 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.spam.finnh.gamecollection.Battleship.Battleship_playarea;
-import com.spam.finnh.gamecollection.Battleship.Countdown;
+import com.spam.finnh.gamecollection.Battleship.Battleship_chooseBoat;
 import com.spam.finnh.gamecollection.Connect4.Connect4_playarea;
 import com.spam.finnh.gamecollection.Instructions.Battleship_instructions;
 import com.spam.finnh.gamecollection.Instructions.Connect4_instructions;
@@ -32,48 +31,56 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         Intent intent;
         intent = new Intent(this, TicTacToe_playarea.class);
         startActivity(intent);
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 
     public void startConnect4(View view) {
         Intent intent;
         intent = new Intent(this, Connect4_playarea.class);
         startActivity(intent);
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 
     public void startBattleship(View view) {
         Intent intent;
-        intent = new Intent(this, Countdown.class);
+        intent = new Intent(this, Battleship_chooseBoat.class);
         startActivity(intent);
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 
     public void startSettings(View view) {
         Intent intent;
         intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 
     public void startHelp(View view) {
         Intent intent;
         intent = new Intent(this, Help.class);
         startActivity(intent);
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 
     public void startTicTacToeInstructions(View view) {
         Intent intent;
         intent = new Intent(this, TicTacToe_instructions.class);
         startActivity(intent);
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 
     public void startConnect4Instructions(View view) {
         Intent intent;
         intent = new Intent(this, Connect4_instructions.class);
         startActivity(intent);
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 
     public void startBattleshipInstructions(View view) {
         Intent intent;
         intent = new Intent(this, Battleship_instructions.class);
         startActivity(intent);
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 
     @Override

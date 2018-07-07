@@ -32,6 +32,21 @@
     <string name="Battleship_instructions_4">When all the squares of a ship have been hit, the ship is sunk, and the ship\'s owner announces this (e.g. \"You sank my battleship!\"). If all a player\'s ships have been sunk, the game is over and their opponent wins.</string>
     <string name="settings_chooseBackgrondColor_subline">Choose you\'re favorite colour</string>
     <string name="settings_design">Design</string>
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="title_activity_tic_tac_toe_instructions">blablieblup</string>
+    <string name="test">testsesadfasdf</string>
+    <string name="background_image">background_image</string>
+    <string name="pref_appearance">Appearance</string>
+    <string name="settings_chooseFont">Font</string>
+    <string name="Go">Go!</string>
+    <string name="number_five">5</string>
+    <string name="number_six">6</string>
+    <string name="player_a_beginns">Player A\'s turn starts in</string>
+    <string name="battleship_setBoats">Set your boats</string>
+    <string name="playarea">playarea</string>
+    <string name="blue_team">blueTeam</string>
+    <string name="red_team">redTeam</string>
+    <string name="choose_your_team">Choose your team</string>
     <string-array name="color_settings">
         <item>@string/color_blue</item>
         <item>@string/color_yellow</item>
@@ -109,19 +124,8 @@
 
     <string name="pref_title_ringtone">Ringtone</string>
     <string name="pref_ringtone_silent">Silent</string>
+    <string name="team">team</string>
 
-    <string name="pref_title_vibrate">Vibrate</string>
-    <string name="title_activity_tic_tac_toe_instructions">blablieblup</string>
-    <string name="test">testsesadfasdf</string>
-    <string name="background_image">background_image</string>
-    <string name="pref_appearance">Appearance</string>
-    <string name="settings_chooseFont">Font</string>
-    <string name="Go">Go!</string>
-    <string name="number_five">5</string>
-    <string name="number_six">6</string>
-    <string name="player_a_beginns">Player A\'s turn starts in</string>
-    <string name="battleship_setBoats">Set your boats</string>
-    <string name="playarea">playarea</string>
 
     <string-array name="fonts">
 

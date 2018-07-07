@@ -43,4 +43,5 @@
     <string name="settings_chooseFont">Schriftart</string>
     <string name="player_a_beginns">Spieler A beginnt in</string>
     <string name="battleship_setBoats">Setze deine Boote</string>
+    <string name="choose_your_team">Wähle dein Team</string>
 </resources>
