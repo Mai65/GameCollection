@@ -36,11 +36,10 @@
         <activity android:name=".Instructions.Connect4_instructions" />
         <activity
             android:name=".Menues.SettingsActivity"
-<<<<<<< HEAD
+
             android:label="@string/title_activity_settings"></activity>
         <activity android:name=".Battleship.Battleship_chooseBoat" />
-=======
-            android:label="@string/title_activity_settings" />
+
         <activity
             android:name=".TransitionThemeActivity"
             android:label="@string/app_name">

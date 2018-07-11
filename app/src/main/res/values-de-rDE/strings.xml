@@ -14,15 +14,11 @@
     <string name="settings">Einstellungen</string>
     <string name="settings_chooseLanguage">Sprache</string>
     <string name="settings_chooseBackroundColor">Hintergrundfarbe</string>
-<<<<<<< HEAD
-    <string name="color_yellow">Gelbe Hintergrundfarbe</string>
-    <string name="color_blue">Blaue Hintergrundfarbe</string>
-    <string name="start_Battleshipg">Schiffe versenken spielen</string>
-=======
+
     <string name="color_yellow">Gelb</string>
     <string name="color_blue">Blau</string>
     <string name="start_Battleship">Schiffe versenken spielen</string>
->>>>>>> origin/settings
+
     <string name="player_a">Spieler A ist am Zug</string>
     <string name="player_b">Spieler B ist am Zug</string>
     <string name="help">Anleitung</string>

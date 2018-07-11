@@ -194,9 +194,9 @@ public class TicTacToe_playarea extends AppCompatActivity {
     private void changeColor(SharedPreferences sharedPreferences) {
         String selected = sharedPreferences.getString("colour", getString(R.string.color_white));
         if (selected.equalsIgnoreCase(getString(R.string.color_yellow))) {
-            findViewById(R.id.imageView).getRootView().getRootView().setBackgroundColor(getResources().getColor(R.color.yellow));
+            findViewById(R.id.button1).getRootView().getRootView().setBackgroundColor(getResources().getColor(R.color.yellow));
         } else if (selected.equalsIgnoreCase(getString(R.string.color_blue))) {//wtf
-            findViewById(R.id.imageView).getRootView().setBackgroundColor(getResources().getColor(R.color.blue));
+            findViewById(R.id.button1).getRootView().setBackgroundColor(getResources().getColor(R.color.blue));
         } else if (selected.equalsIgnoreCase(getString(R.string.color_white))) {
             findViewById(R.id.button1).getRootView().setBackgroundColor(getResources().getColor(R.color.white));
         }
