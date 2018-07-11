@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.spam.finnh.gamecollection">
 
     <application
@@ -8,7 +9,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.NoActionBar">
+        android:theme="@style/AppTheme.NoActionBar"
+        android:fullBackupContent="false"
+        tools:ignore="ExtraText">
         >
         <activity android:name=".Menues.MainActivity">
             <intent-filter>
@@ -26,13 +29,17 @@
         <activity android:name=".Connect4.Connect4_playarea" />
         <activity android:name=".Connect4.Connect4_wonScreen" />
         <activity android:name=".Battleship.Battleship_playarea" />
+        <activity android:name=".Battleship.Countdown"/>
         <activity android:name=".Instructions.TicTacToe_instructions" />
         <activity android:name=".Menues.Help" />
         <activity android:name=".Instructions.Battleship_instructions" />
         <activity android:name=".Instructions.Connect4_instructions" />
         <activity
             android:name=".Menues.SettingsActivity"
-            android:label="@string/title_activity_settings" />
+
+            android:label="@string/title_activity_settings"></activity>
+        <activity android:name=".Battleship.Battleship_chooseBoat" />
+
         <activity
             android:name=".TransitionThemeActivity"
             android:label="@string/app_name">
@@ -43,6 +50,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Menues.TransitionThemeActivity"></activity>
+>>>>>>> origin/settings
     </application>
 
 </manifest>
