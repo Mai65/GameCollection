@@ -37,10 +37,17 @@
         <activity
             android:name=".Menues.SettingsActivity"
 <<<<<<< HEAD
+<<<<<<< HEAD
             android:label="@string/title_activity_settings"></activity>
         <activity android:name=".Battleship.Battleship_chooseBoat" />
 =======
             android:label="@string/title_activity_settings" />
+=======
+
+            android:label="@string/title_activity_settings"></activity>
+        <activity android:name=".Battleship.Battleship_chooseBoat" />
+
+>>>>>>> origin/settings
         <activity
             android:name=".TransitionThemeActivity"
             android:label="@string/app_name">
