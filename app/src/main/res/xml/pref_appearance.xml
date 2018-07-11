@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <ListPreference
-        android:defaultValue="1"
+        android:id="@+id/test"
+        android:defaultValue="@string/color_white"
         android:entries="@array/color_settings"
         android:entryValues="@array/color_settings"
         android:key="colour"

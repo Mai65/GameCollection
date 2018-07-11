@@ -1,8 +1,10 @@
 package com.spam.finnh.gamecollection.Menues;
 
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
@@ -16,8 +18,10 @@ import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 import android.preference.RingtonePreference;
 import android.support.v7.app.ActionBar;
+import android.support.v7.widget.ActivityChooserView;
 import android.text.TextUtils;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.spam.finnh.gamecollection.R;
 
@@ -34,7 +38,10 @@ import java.util.List;
  * href="http://developer.android.com/guide/topics/ui/settings.html">Settings
  * API Guide</a> for more information on developing a Settings UI.
  */
-public class SettingsActivity extends AppCompatPreferenceActivity {
+
+public class SettingsActivity extends AppCompatPreferenceActivity  {
+
+    SharedPreferences prefs;
 
     /**
      * A preference value change listener that updates the preference's summary
@@ -84,6 +91,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                 // simple string representation.
                 preference.setSummary(stringValue);
             }
+
             return true;
         }
     };
@@ -93,6 +101,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
      * example, 10" tablets are extra-large.
      */
     private static boolean isXLargeTablet(Context context) {
+        ;
         return (context.getResources().getConfiguration().screenLayout
                 & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_XLARGE;
     }
@@ -120,8 +129,14 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        prefs = PreferenceManager.getDefaultSharedPreferences(this);
+
+        changeColor(prefs);
         super.onCreate(savedInstanceState);
         setupActionBar();
+        prefs.registerOnSharedPreferenceChangeListener(spChanged);
+
+        View test = findViewById(R.id.header_Appearance);
     }
 
     /**
@@ -150,6 +165,8 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public void onBuildHeaders(List<Header> target) {
         loadHeadersFromResource(R.xml.pref_headers, target);
+
+
     }
 
     /**
@@ -157,12 +174,23 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
      * Make sure to deny any unknown fragments here.
      */
     protected boolean isValidFragment(String fragmentName) {
+
         return PreferenceFragment.class.getName().equals(fragmentName)
                 || GeneralPreferenceFragment.class.getName().equals(fragmentName)
                 || DataSyncPreferenceFragment.class.getName().equals(fragmentName)
                 || NotificationPreferenceFragment.class.getName().equals(fragmentName)
                 || AppearanceFragment.class.getName().equals(fragmentName);
     }
+
+    SharedPreferences.OnSharedPreferenceChangeListener spChanged = new
+            SharedPreferences.OnSharedPreferenceChangeListener() {
+                @Override
+                public void onSharedPreferenceChanged(SharedPreferences sharedPreferences,
+                                                      String key) {
+                    recreate();
+                }
+            };
+
 
     /**
      * This fragment shows general preferences only. It is used when the
@@ -278,9 +306,24 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             int id = item.getItemId();
             if (id == android.R.id.home) {
                 startActivity(new Intent(getActivity(), SettingsActivity.class));
+
                 return true;
             }
             return super.onOptionsItemSelected(item);
+        }
+    }
+    private void changeColor(SharedPreferences sharedPreferences) {
+
+
+
+        String selected = sharedPreferences.getString("colour", getString(R.string.color_white));
+        if (selected.equalsIgnoreCase(getString(R.string.color_yellow))) {
+            setTheme(R.style.YellowTheme);
+        } else if (selected.equalsIgnoreCase(getString(R.string.color_blue))) {
+            setTheme(R.style.BlueTheme);
+        } else if (selected.equalsIgnoreCase(getString(R.string.color_white))) {
+            setTheme(R.style.WhiteTheme);
+
         }
     }
 }
