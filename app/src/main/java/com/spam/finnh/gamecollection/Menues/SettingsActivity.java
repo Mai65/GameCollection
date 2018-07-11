@@ -39,7 +39,7 @@ import java.util.List;
  * API Guide</a> for more information on developing a Settings UI.
  */
 
-public class SettingsActivity extends AppCompatPreferenceActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
+public class SettingsActivity extends AppCompatPreferenceActivity  {
 
     SharedPreferences prefs;
 
@@ -134,7 +134,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity implements Sha
         changeColor(prefs);
         super.onCreate(savedInstanceState);
         setupActionBar();
-
+        prefs.registerOnSharedPreferenceChangeListener(spChanged);
 
         View test = findViewById(R.id.header_Appearance);
     }
@@ -182,12 +182,14 @@ public class SettingsActivity extends AppCompatPreferenceActivity implements Sha
                 || AppearanceFragment.class.getName().equals(fragmentName);
     }
 
-    @Override
-    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-        Intent intent = new Intent(this, SettingsActivity.class);
-        startActivity(intent);
-        finish();
-    }
+    SharedPreferences.OnSharedPreferenceChangeListener spChanged = new
+            SharedPreferences.OnSharedPreferenceChangeListener() {
+                @Override
+                public void onSharedPreferenceChanged(SharedPreferences sharedPreferences,
+                                                      String key) {
+                    recreate();
+                }
+            };
 
 
     /**

@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         if ("colour".equals(key)) {
             changeColor(sharedPreferences);
+            recreate();
         }
     }
 
