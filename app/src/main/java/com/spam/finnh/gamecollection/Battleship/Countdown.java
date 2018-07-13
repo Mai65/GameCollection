@@ -12,6 +12,7 @@ import com.spam.finnh.gamecollection.R;
 
 public class Countdown extends AppCompatActivity {
     private TextView time;
+    private int tick;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,21 +33,28 @@ public class Countdown extends AppCompatActivity {
     }
 
     public void start() {
-        MediaPlayer mp = MediaPlayer.create(this,R.raw.shiphorn);
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.shiphorn);
         mp.start();
         time.setText(R.string.number_six);
+        tick = 5;
 
         CountDownTimer countDownTimer = new CountDownTimer(6 * 1000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 time.setText("" + millisUntilFinished / 1000);
+                if(tick == 0)
+                {
+                    time.setText(R.string.Go);
+                }
+                tick--;
             }
+
             @Override
             public void onFinish() {
                 startGame();
             }
         };
-         countDownTimer.start();
+        countDownTimer.start();
     }
 
     public void startGame() {
