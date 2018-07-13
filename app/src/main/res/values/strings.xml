@@ -125,6 +125,7 @@
     <string name="pref_title_ringtone">Ringtone</string>
     <string name="pref_ringtone_silent">Silent</string>
     <string name="team">team</string>
+    <string name="field_occupied">This position is already filled</string>
 
 
     <string-array name="fonts">
