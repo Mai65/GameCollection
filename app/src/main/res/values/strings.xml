@@ -126,6 +126,12 @@
     <string name="pref_ringtone_silent">Silent</string>
     <string name="team">team</string>
     <string name="field_occupied">This position is already filled</string>
+    <string name="noBoatSelected">Select a boat type below the playarea to continue</string>
+    <string name="five_boat">You choose the 5er boat</string>
+    <string name="four_boat">You choose the 4er boat</string>
+    <string name="three_boat">You choose the 3er boat</string>
+    <string name="two_boat">You choose the 2er boat</string>
+    <string name="remove_boat">Choose the boat you want to remove</string>
 
 
     <string-array name="fonts">
